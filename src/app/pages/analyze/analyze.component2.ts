@@ -4,7 +4,7 @@ import { NgbModalConfig, NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-analyze",
-  templateUrl: "analyze.component.html",
+  templateUrl: "analyze.component2.html",
   styleUrls: ["analyze.component.scss"],
   providers: [NgbModalConfig, NgbModal],
 })
@@ -170,7 +170,6 @@ export class analyzeComponent implements OnInit {
     this.trustcalcservice.getsolution(localStorage.getItem('email')).subscribe((data: any) => {
       this.SolutionName = data.SolutionName;
     });
-    
 
   }
 
@@ -382,37 +381,33 @@ export class analyzeComponent implements OnInit {
     let innerHtml = '';
     for (const [key, value] of Object.entries(this.description.fairness)) {
       innerHtml += `
-      <h4 style="color: mediumaquamarine">${key.replace(/^\w/, c => c.toUpperCase())}</h4>
-      <pre>${JSON.stringify(value, null, 2).replace(/^\w/, c => c.toUpperCase())}</pre>`;
+      <h4 style="color: mediumaquamarine">${key}</h4>
+      <pre>${JSON.stringify(value, null, 2)}</pre>`;
     }
-    innerHtml = innerHtml.replace(/{/g, '').replace(/}/g, '').replace(/_property/g, '').replace(/"/g, '').replace(/'/g, '').replace(/_/g, ' ');
     this.description.fairnessText = innerHtml;
     innerHtml = '';
     for (const [key, value] of Object.entries(this.description.methodology)) {
       if (value == 'undefined' || value == undefined) continue;
       innerHtml += `
-      <h4 style="color: mediumaquamarine">${key.replace(/^\w/, c => c.toUpperCase())}</h4>
-      <pre>${value == 'undefined' ? '' : JSON.stringify(value, null, 2).replace(/^\w/, c => c.toUpperCase())}</pre>`;
+      <h4 style="color: mediumaquamarine">${key}</h4>
+      <pre>${value == 'undefined' ? '' : JSON.stringify(value, null, 2)}</pre>`;
     }
-    innerHtml = innerHtml.replace(/{/g, '').replace(/}/g, '').replace(/_property/g, '').replace(/"/g, '').replace(/'/g, '').replace(/_/g, ' ');
     this.description.methodologyText = innerHtml;
     innerHtml = '';
     for (const [key, value] of Object.entries(this.description.explainability)) {
       console.log('va:', value);
       if (value == 'undefined' || value == undefined) continue;
       innerHtml += `
-      <h4 style="color: mediumaquamarine">${key.replace(/^\w/, c => c.toUpperCase())}</h4>
-      <pre>${value == 'undefined' ? '' : JSON.stringify(value, null, 2).replace(/^\w/, c => c.toUpperCase())}</pre>`;
+      <h4 style="color: mediumaquamarine">${key}</h4>
+      <pre>${value == 'undefined' ? '' : JSON.stringify(value, null, 2)}</pre>`;
     }
-    innerHtml = innerHtml.replace(/{/g, '').replace(/}/g, '').replace(/_property/g, '').replace(/"/g, '').replace(/'/g, '').replace(/_/g, ' ');
     this.description.explainabilityText = innerHtml;
     innerHtml = '';
     for (const [key, value] of Object.entries(this.description.robustness)) {
       innerHtml += `
-      <h4 style="color: mediumaquamarine">${key.replace(/^\w/, c => c.toUpperCase())}</h4>
-      <pre>${JSON.stringify(value, null, 2).replace(/^\w/, c => c.toUpperCase())}</pre>`;
+      <h4 style="color: mediumaquamarine">${key}</h4>
+      <pre>${JSON.stringify(value, null, 2)}</pre>`;
     }
-    innerHtml = innerHtml.replace(/{/g, '').replace(/}/g, '').replace(/_property/g, '').replace(/"/g, '').replace(/'/g, '').replace(/_/g, ' ');
     this.description.robustnessText = innerHtml;
   }
 }

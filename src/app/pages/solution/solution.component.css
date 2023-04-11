@@ -7,3 +7,93 @@
 form.drawer-div>p {
   color: black !important;
 }
+
+.btn-primary {
+  background-color: palevioletred !important;
+  background-image: none;
+}
+
+.btn-primary:hover {
+  background-color: #DFCFBE !important;
+  background-image: none !important;
+}
+
+select.dropdown {
+  padding: 3px 10px !important;
+  border-radius: 25px !important;
+}
+
+label {
+  font-size: 15px;
+  margin-right: 7px;
+}
+
+textarea {
+  border: 1px solid #2b3553;
+}
+
+textarea:active {
+  border: 1px solid #7FCDCD;
+}
+
+.create-fact {
+  padding: 3px 10px;
+  font-size: 13px;
+  color: white;
+  margin-left: 10px;
+  border-radius: 25px;
+  border: none;
+  background: palevioletred;
+}
+
+.create-factsheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-factsheet p {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  color: white !important;
+}
+
+input {
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+.upload {
+  border-radius: 25px;
+  background: palevioletred;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.change {
+  border-radius: 25px;
+  background: palevioletred;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.delete {
+  border-radius: 25px;
+  background: black;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+}

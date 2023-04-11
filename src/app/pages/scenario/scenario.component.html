@@ -295,8 +295,8 @@
   <div class=" row">
     <div class=" col">
       <div *ngIf="!submitted" class="submit-form card">
-        <div class=" card-header">
-          <h5 class=" title">CreateScenario</h5>
+        <div class=" card-header p-3 text-center" style="background: palevioletred">
+          <h4 style="margin-top:0px">Create Scenario</h4>
         </div>
         <div class=" card-body">
           <form>
@@ -320,24 +320,26 @@
 
           </form>
           <ul class="p-1">
-            <li class="card-header">
-              Your Scenarios
+            <li class="card-header d-flex align-items-center justify-content-center pb-2"
+              style="border-bottom: 1px solid white">
+              <h5>Your Scenarios</h5>
             </li>
-            <li *ngFor="let contact of trustcalc.scenarioList" style="border-bottom: 1px solid gray">
+            <li *ngFor="let contact of trustcalc.scenarioList" class="mt-2">
               <div class="card-item" style="display: flex; align-items: center; justify-content: space-between;">
                 <a [routerLink]="['/maps', contact.id]" (click)="showDetail(contact.id)">
-                  <span class="mr-3" style="color: red">Name: {{ contact.scenario_name }}</span>
+                  <span class="mr-3" style="color: white"><i class="fas fa-angle-right"></i> {{ contact.scenario_name
+                    }}</span>
                 </a>
               </div>
             </li>
           </ul>
         </div>
         <div class=" card-footer">
-          <button (click)="savetrustcalc()" *ngIf="!isEditing" class=" btn btn-fill btn-danger" type="submit">Create
+          <button (click)="savetrustcalc()" *ngIf="!isEditing" class="create" type="submit">Create
             Scenario</button>
-          <button (click)="updatetrustcalc()" *ngIf="isEditing" class=" btn btn-fill" type="submit">Update
+          <button (click)="updatetrustcalc()" *ngIf="isEditing" class="update" type="submit">Update
             Scenario</button>
-          <button (click)="deletetrustcalc()" *ngIf="isEditing" class=" btn btn-fill" type="submit">Delete
+          <button (click)="deletetrustcalc()" *ngIf="isEditing" class="delete" type="submit">Delete
             Scenario</button>
         </div>
       </div>

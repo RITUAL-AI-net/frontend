@@ -1,0 +1,41 @@
+label {
+  font-size: 15px;
+}
+
+input {
+  border-radius: 25px;
+}
+
+.create {
+  border-radius: 25px;
+  background: palevioletred;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.update {
+  border-radius: 25px;
+  background: palevioletred;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.delete {
+  border-radius: 25px;
+  background: black;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+}

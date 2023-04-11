@@ -347,7 +347,7 @@
           <li *ngFor="let contact of solutionList" class="p-3">
             <div class="card-item" style="display: flex; align-items: center; justify-content: space-between;">
               <a [routerLink]="['/icons', contact.id]" (click)="showDetail(contact.id)" style="font-size:larger">
-                <span class="mr-3" style="color:white"><i class="fas fa-angle-right"></i>
+                <span class="mr-3" style="color: white"><i class="fas fa-angle-right"></i>
                   {{contact.solution_name}}
                 </span>
               </a>
@@ -455,7 +455,7 @@
                 <div class="col-md-6">
                   <span>
                     <label for="file-input" (mouseenter)="showMetricToolTip=true"
-                      (mouseleave)="showMetricToolTip=false">Metrics Weight File:</label>
+                      (mouseleave)="showMetricToolTip=false">Metrics Weight File</label>
                     <span class="tooltext" *ngIf="showMetricToolTip">Select the Metric file</span>
                   </span>
                   <input class="form-control" id="WeightMetics" name="WeightMetics"
@@ -478,8 +478,7 @@
                   <table *ngIf="data">
                     <thead>
                       <tr>
-                        <th *ngFor="let header of headers" (click)="toggleProtectedFeature(header)"
-                          style="color: white">
+                        <th *ngFor="let header of headers" (click)="toggleProtectedFeature(header)">
                           {{header}}
                           <span *ngIf="protectedFeatures.includes(header)">(protected)</span>
                         </th>
@@ -656,7 +655,7 @@
               <div class=" row">
                 <div class=" col-md-6">
                   <span style="color: red"><label (mouseenter)="showTestToolTip=true"
-                      (mouseleave)="showTestToolTip=false" for="formFileLg" class="form-label">Tesdtata</label>*
+                      (mouseleave)="showTestToolTip=false" for="formFileLg" class="form-label">Testdata File</label>*
                     <span class="tooltext" *ngIf="showTestToolTip">Select the test file</span>
                   </span>
                   <input class="form-control" id="TestFile" name="TestFile" (change)="onTestFile($event)" required
@@ -676,7 +675,7 @@
 
                 <div class="col-md-6">
                   <span style="color: red"><label (mouseenter)="showTrainingToolTip=true"
-                      (mouseleave)="showTrainingToolTip=false" for="file-input">Training Data File:</label>*
+                      (mouseleave)="showTrainingToolTip=false" for="file-input">Trainingdata File:</label>*
                     <span class="tooltext" *ngIf="showTrainingToolTip">Select the outlier file</span>
                   </span>
                   <input class="form-control" id="TestFile" name="TestFile" (change)="onFileChange($event)" required
@@ -694,7 +693,7 @@
 
                 <div class="col-md-6">
                   <span><label for="file-input" (mouseenter)="showMetricToolTip=true"
-                      (mouseleave)="showMetricToolTip=false">Weight Metrics File:</label>
+                      (mouseleave)="showMetricToolTip=false">Metrics Weight File</label>
                     <span class="tooltext" *ngIf="showMetricToolTip">Select the metric file</span>
                   </span>
                   <input class="form-control" id="WeightMetics" name="WeightMetics"
@@ -717,8 +716,7 @@
                   <table *ngIf="data">
                     <thead>
                       <tr>
-                        <th *ngFor="let header of headers" (click)="toggleProtectedFeature(header)"
-                          style="color: white">
+                        <th *ngFor="let header of headers" (click)="toggleProtectedFeature(header)">
                           {{header}}
                           <span *ngIf="protectedFeatures.includes(header)">(protected)</span>
                         </th>

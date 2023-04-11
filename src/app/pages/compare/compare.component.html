@@ -295,182 +295,235 @@
   <div class=" row">
     <div class=" col-md-12">
       <div class=" card">
-        <div class=" card-header">
-          <h5 class=" title">Compare</h5>
-        </div>
-        <button style="background: none;" (click)="scorePanelVisibility=!scorePanelVisibility">
-          <h5 class=" title">Setting</h5>
-        </button>
-        <div class="setting-panel row pl-md-1" *ngIf="scorePanelVisibility">
-          <div class="solution1 col-md-6">
-            <div class="score-panel">
-              <div class="metrics">
-                <h6>Weight Metrics</h6>
-                <div class="row">
-                  <div class="fairness col-md-6 p-2">
-                    <p class="fairness">Fairness</p>
-                    <div class="adjust"><span>underfitting</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.underfitting" /></div>
-                    <div class="adjust"><span>overfitting</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.overfitting" /></div>
-                    <div class="adjust"><span>statistical_parity_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.statistical_parity_difference" /></div>
-                    <div class="adjust"><span>equal_opportunity_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.equal_opportunity_difference" /></div>
-                    <div class="adjust"><span>average_odds_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.average_odds_difference" /></div>
-                    <div class="adjust"><span>disparate_impact</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.disparate_impact" /></div>
-                    <div class="adjust"><span>class_balance</span><input type="number"
-                        [(ngModel)]="this.weights.fairness1.class_balance" /></div>
-                  </div>
-                  <div class="explainability col-md-6 p-2">
-                    <p class="explainability">explainability</p>
-                    <div class="adjust"><span>algorithm_class</span><input type="number"
-                        [(ngModel)]="this.weights.explainability1.algorithm_class" /></div>
-                    <div class="adjust"><span>correlated_features</span><input type="number"
-                        [(ngModel)]="this.weights.explainability1.correlated_features" /></div>
-                    <div class="adjust"><span>model_size</span><input type="number"
-                        [(ngModel)]="this.weights.explainability1.model_size" /></div>
-                    <div class="adjust"><span>feature_relevance</span><input type="number"
-                        [(ngModel)]="this.weights.explainability1.feature_relevance" /></div>
-                    <div class="adjust"><span>permutation_feature_importance</span><input type="number"
-                        [(ngModel)]="this.weights.explainability1.permutation_feature_importance" /></div>
-                  </div>
-                  <div class="robustness p-2 col-md-6">
-                    <p class="robustness">robustness</p>
-                    <div class="adjust"><span>confidence_score</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.confidence_score" /></div>
-                    <div class="adjust"><span>clique_method</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.clique_method" /></div>
-                    <div class="adjust"><span>loss_sensitivity</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.loss_sensitivity" /></div>
-                    <div class="adjust"><span>clever_score</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.clever_score" /></div>
-                    <div class="adjust"><span>er_fast_gradient_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.er_fast_gradient_attack" /></div>
-                    <div class="adjust"><span>er_carlini_wagner_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.er_carlini_wagner_attack" /></div>
-                    <div class="adjust"><span>er_deepfool_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness1.er_deepfool_attack" /></div>
-                  </div>
-                  <div class="methodology p-2 col-md-6">
-                    <p class="methodology">methodology</p>
-                    <div class="adjust"><span>normalization</span><input type="number"
-                        [(ngModel)]="this.weights.methodology1.normalization" /></div>
-                    <div class="adjust"><span>missing_data</span><input type="number"
-                        [(ngModel)]="this.weights.methodology1.missing_data" /></div>
-                    <div class="adjust"><span>regularization</span><input type="number"
-                        [(ngModel)]="this.weights.methodology1.regularization" /></div>
-                    <div class="adjust"><span>train_test_split</span><input type="number"
-                        [(ngModel)]="this.weights.methodology1.train_test_split" /></div>
-                    <div class="adjust"><span>factsheet_completeness</span><input type="number"
-                        [(ngModel)]="this.weights.methodology1.factsheet_completeness" /></div>
-                  </div>
-                </div>
-              </div>
-              <div class="pillars">
-                <h6>Wieght Pillars</h6>
-                <div class="pillars p-2">
-                  <div class="adjust"><span>fairness</span><input type="number"
-                      [(ngModel)]="this.weights.fairness1.main" /></div>
-                  <div class="adjust"><span>explainability</span><input type="number"
-                      [(ngModel)]="this.weights.explainability1.main" /></div>
-                  <div class="adjust"><span>robustness</span><input type="number"
-                      [(ngModel)]="this.weights.robustness1.main" />
-                  </div>
-                  <div class="adjust"><span>methodology</span><input type="number"
-                      [(ngModel)]="this.weights.methodology1.main" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="solution1 col-md-6">
-            <div class="score-panel">
-              <div class="metrics">
-                <h6>Weight Metrics</h6>
-                <div class="row">
-                  <div class="fairness col-md-6 p-2">
-                    <p class="fairness">Fairness</p>
-                    <div class="adjust"><span>underfitting</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.underfitting" /></div>
-                    <div class="adjust"><span>overfitting</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.overfitting" /></div>
-                    <div class="adjust"><span>statistical_parity_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.statistical_parity_difference" /></div>
-                    <div class="adjust"><span>equal_opportunity_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.equal_opportunity_difference" /></div>
-                    <div class="adjust"><span>average_odds_difference</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.average_odds_difference" /></div>
-                    <div class="adjust"><span>disparate_impact</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.disparate_impact" /></div>
-                    <div class="adjust"><span>class_balance</span><input type="number"
-                        [(ngModel)]="this.weights.fairness2.class_balance" /></div>
-                  </div>
-                  <div class="explainability col-md-6 p-2">
-                    <p class="explainability">explainability</p>
-                    <div class="adjust"><span>algorithm_class</span><input type="number"
-                        [(ngModel)]="this.weights.explainability2.algorithm_class" /></div>
-                    <div class="adjust"><span>correlated_features</span><input type="number"
-                        [(ngModel)]="this.weights.explainability2.correlated_features" /></div>
-                    <div class="adjust"><span>model_size</span><input type="number"
-                        [(ngModel)]="this.weights.explainability2.model_size" /></div>
-                    <div class="adjust"><span>feature_relevance</span><input type="number"
-                        [(ngModel)]="this.weights.explainability2.feature_relevance" /></div>
-                    <div class="adjust"><span>permutation_feature_importance</span><input type="number"
-                        [(ngModel)]="this.weights.explainability2.permutation_feature_importance" /></div>
-                  </div>
-                  <div class="robustness p-2 col-md-6">
-                    <p class="robustness">robustness</p>
-                    <div class="adjust"><span>confidence_score</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.confidence_score" /></div>
-                    <div class="adjust"><span>clique_method</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.clique_method" /></div>
-                    <div class="adjust"><span>loss_sensitivity</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.loss_sensitivity" /></div>
-                    <div class="adjust"><span>clever_score</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.clever_score" /></div>
-                    <div class="adjust"><span>er_fast_gradient_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.er_fast_gradient_attack" /></div>
-                    <div class="adjust"><span>er_carlini_wagner_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.er_carlini_wagner_attack" /></div>
-                    <div class="adjust"><span>er_deepfool_attack</span><input type="number"
-                        [(ngModel)]="this.weights.robustness2.er_deepfool_attack" /></div>
-                  </div>
-                  <div class="methodology p-2 col-md-6">
-                    <p class="methodology">methodology</p>
-                    <div class="adjust"><span>normalization</span><input type="number"
-                        [(ngModel)]="this.weights.methodology2.normalization" /></div>
-                    <div class="adjust"><span>missing_data</span><input type="number"
-                        [(ngModel)]="this.weights.methodology2.missing_data" /></div>
-                    <div class="adjust"><span>regularization</span><input type="number"
-                        [(ngModel)]="this.weights.methodology2.regularization" /></div>
-                    <div class="adjust"><span>train_test_split</span><input type="number"
-                        [(ngModel)]="this.weights.methodology2.train_test_split" /></div>
-                    <div class="adjust"><span>factsheet_completeness</span><input type="number"
-                        [(ngModel)]="this.weights.methodology2.factsheet_completeness" /></div>
+        <div class=" card-header p-3 text-center" style="background: palevioletred;">
+          <button style="background: none; padding: 5px 12px;" (click)="scorePanelVisibility=!scorePanelVisibility">
+            <h5 class="title">Compare Solution</h5>
+          </button>
+          <div class="setting-panel pt-3 mt-3" *ngIf="scorePanelVisibility">
+            <div class="solution1 col-md-12">
+              <div class="score-panel">
+                <div class="metrics">
+                  <h6>Weight Metrics</h6>
+                  <div class="row">
+                    <div class="fairness col-md-6 p-2">
+                      <p class="fairness">Fairness</p>
+                      <div class="adjust"><span>underfitting</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.underfitting"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>overfitting</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.overfitting"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>statistical_parity_difference</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.statistical_parity_difference"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>equal_opportunity_difference</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.equal_opportunity_difference"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>average_odds_difference</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.average_odds_difference"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>disparate_impact</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.disparate_impact"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>class_balance</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.fairness1.class_balance"></mat-slider>
+                      </div>
+                    </div>
+                    <div class="explainability col-md-6 p-2">
+                      <p class="explainability">explainability</p>
+                      <div class="adjust"><span>algorithm_class</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.explainability1.algorithm_class"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>correlated_features</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.explainability1.correlated_features"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>model_size</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.explainability1.model_size"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>feature_relevance</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.explainability1.feature_relevance"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>permutation_feature_importance</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.explainability1.permutation_feature_importance"></mat-slider>
+                      </div>
+                    </div>
+                    <div class="robustness p-2 col-md-6">
+                      <p class="robustness">robustness</p>
+                      <div class="adjust"><span>confidence_score</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.confidence_score"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>clique_method</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.clique_method"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>loss_sensitivity</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.loss_sensitivity"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>clever_score</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.clever_score"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>er_fast_gradient_attack</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.er_fast_gradient_attack"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>er_carlini_wagner_attack</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.er_carlini_wagner_attack"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>er_deepfool_attack</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.robustness1.er_deepfool_attack"></mat-slider>
+                      </div>
+                    </div>
+                    <div class="methodology p-2 col-md-6">
+                      <p class="methodology">methodology</p>
+                      <div class="adjust"><span>normalization</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.methodology1.normalization"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>missing_data</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.methodology1.missing_data"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>regularization</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.methodology1.regularization"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>train_test_split</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.methodology1.train_test_split"></mat-slider>
+                      </div>
+                      <div class="adjust"><span>factsheet_completeness</span>
+                        <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                          [(ngModel)]="this.weights.methodology1.factsheet_completeness"></mat-slider>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="pillars">
-                <h6>Wieght Pillars</h6>
-                <div class="pillars p-2">
-                  <div class="adjust"><span>fairness</span><input type="number"
-                      [(ngModel)]="this.weights.fairness2.main" /></div>
-                  <div class="adjust"><span>explainability</span><input type="number"
-                      [(ngModel)]="this.weights.explainability2.main" /></div>
-                  <div class="adjust"><span>robustness</span><input type="number"
-                      [(ngModel)]="this.weights.robustness2.main" />
-                  </div>
-                  <div class="adjust"><span>methodology</span><input type="number"
-                      [(ngModel)]="this.weights.methodology2.main" />
+                <div class="pillars">
+                  <h6>Wieght Pillars</h6>
+                  <div class="pillars p-2">
+                    <div class="adjust"><span>fairness</span>
+                      <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                        [(ngModel)]="this.weights.fairness1.main"></mat-slider>
+                    </div>
+                    <div class="adjust"><span>explainability</span>
+                      <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                        [(ngModel)]="this.weights.explainability1.main"></mat-slider>
+                    </div>
+                    <div class="adjust"><span>robustness</span>
+                      <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                        [(ngModel)]="this.weights.robustness1.main"></mat-slider>
+                    </div>
+                    <div class="adjust"><span>methodology</span>
+                      <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
+                        [(ngModel)]="this.weights.methodology1.main"></mat-slider>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="solution1 col-md-6" style="display: none;">
+              <div class="score-panel">
+                <div class="metrics">
+                  <h6>Weight Metrics</h6>
+                  <div class="row">
+                    <div class="fairness col-md-6 p-2">
+                      <p class="fairness">Fairness</p>
+                      <div class="adjust"><span>underfitting</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.underfitting" /></div>
+                      <div class="adjust"><span>overfitting</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.overfitting" /></div>
+                      <div class="adjust"><span>statistical_parity_difference</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.statistical_parity_difference" /></div>
+                      <div class="adjust"><span>equal_opportunity_difference</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.equal_opportunity_difference" /></div>
+                      <div class="adjust"><span>average_odds_difference</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.average_odds_difference" /></div>
+                      <div class="adjust"><span>disparate_impact</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.disparate_impact" /></div>
+                      <div class="adjust"><span>class_balance</span><input type="number"
+                          [(ngModel)]="this.weights.fairness2.class_balance" /></div>
+                    </div>
+                    <div class="explainability col-md-6 p-2">
+                      <p class="explainability">explainability</p>
+                      <div class="adjust"><span>algorithm_class</span><input type="number"
+                          [(ngModel)]="this.weights.explainability2.algorithm_class" /></div>
+                      <div class="adjust"><span>correlated_features</span><input type="number"
+                          [(ngModel)]="this.weights.explainability2.correlated_features" /></div>
+                      <div class="adjust"><span>model_size</span><input type="number"
+                          [(ngModel)]="this.weights.explainability2.model_size" /></div>
+                      <div class="adjust"><span>feature_relevance</span><input type="number"
+                          [(ngModel)]="this.weights.explainability2.feature_relevance" /></div>
+                      <div class="adjust"><span>permutation_feature_importance</span><input type="number"
+                          [(ngModel)]="this.weights.explainability2.permutation_feature_importance" /></div>
+                    </div>
+                    <div class="robustness p-2 col-md-6">
+                      <p class="robustness">robustness</p>
+                      <div class="adjust"><span>confidence_score</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.confidence_score" /></div>
+                      <div class="adjust"><span>clique_method</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.clique_method" /></div>
+                      <div class="adjust"><span>loss_sensitivity</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.loss_sensitivity" /></div>
+                      <div class="adjust"><span>clever_score</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.clever_score" /></div>
+                      <div class="adjust"><span>er_fast_gradient_attack</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.er_fast_gradient_attack" /></div>
+                      <div class="adjust"><span>er_carlini_wagner_attack</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.er_carlini_wagner_attack" /></div>
+                      <div class="adjust"><span>er_deepfool_attack</span><input type="number"
+                          [(ngModel)]="this.weights.robustness2.er_deepfool_attack" /></div>
+                    </div>
+                    <div class="methodology p-2 col-md-6">
+                      <p class="methodology">methodology</p>
+                      <div class="adjust"><span>normalization</span><input type="number"
+                          [(ngModel)]="this.weights.methodology2.normalization" /></div>
+                      <div class="adjust"><span>missing_data</span><input type="number"
+                          [(ngModel)]="this.weights.methodology2.missing_data" /></div>
+                      <div class="adjust"><span>regularization</span><input type="number"
+                          [(ngModel)]="this.weights.methodology2.regularization" /></div>
+                      <div class="adjust"><span>train_test_split</span><input type="number"
+                          [(ngModel)]="this.weights.methodology2.train_test_split" /></div>
+                      <div class="adjust"><span>factsheet_completeness</span><input type="number"
+                          [(ngModel)]="this.weights.methodology2.factsheet_completeness" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pillars">
+                  <h6>Wieght Pillars</h6>
+                  <div class="pillars p-2">
+                    <div class="adjust"><span>fairness</span><input type="number"
+                        [(ngModel)]="this.weights.fairness2.main" /></div>
+                    <div class="adjust"><span>explainability</span><input type="number"
+                        [(ngModel)]="this.weights.explainability2.main" /></div>
+                    <div class="adjust"><span>robustness</span><input type="number"
+                        [(ngModel)]="this.weights.robustness2.main" />
+                    </div>
+                    <div class="adjust"><span>methodology</span><input type="number"
+                        [(ngModel)]="this.weights.methodology2.main" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button (click)="apply()">APPLY</button>
           </div>
-          <button (click)="apply()">APPLY</button>
         </div>
         <div class=" card-body">
           <form>
@@ -478,8 +531,8 @@
               <div class=" col-md-6">
                 <div class=" form-group">
                   <tr class="us-form error">
-                    <th>Select Scenarios</th>
-                    <td class="unwrap">
+                    <label>Select Scenarios</label>
+                    <td class="unwrap" style="background: none;">
                       <select class="dropdown" name="ScenarioSelect" id="ScenarioSelect"
                         [(ngModel)]="trustcalc.SelectScenario" required>
                         <option>Select Scenario</option>
@@ -495,8 +548,8 @@
               <div class=" col-md-6">
                 <div class=" form-group">
                   <tr class="us-form error">
-                    <th>Select Solutions 1</th>
-                    <td class="unwrap">
+                    <label>Select Solutions 1</label>
+                    <td class="unwrap" style="background: none;">
                       <select class="dropdown" name="SolutionSelect1" id="SolutionSelect1"
                         [(ngModel)]="trustcalc.SelectSolution1" required>
                         <option>Select Solution 1</option>
@@ -512,8 +565,8 @@
               <div class=" col-md-6">
                 <div class=" form-group">
                   <tr class="us-form error">
-                    <th>Select Solutions 2</th>
-                    <td class="unwrap">
+                    <label>Select Solutions 2</label>
+                    <td class="unwrap" style="background: none;">
                       <select class="dropdown" name="SolutionSelect2" id="SolutionSelect2"
                         [(ngModel)]="trustcalc.SelectSolution2" required>
                         <option>Select Solution 2</option>
@@ -526,7 +579,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <button (click)="savetrustcalc()" class=" btn btn-fill btn-danger" type="submit">Compare
+                <button (click)="savetrustcalc()" class="compare" type="submit">Compare
                   Solution</button>
               </div>
             </div>
@@ -540,7 +593,7 @@
               <div class=" col-md-6 pl-md-1">
                 <div class=" form-group">
                   <div class="mx-3 row">
-                    <h4>Model1 Information:</h4>
+                    <h4>General Information Model 1:</h4>
                   </div>
                   <div class="mx-3 row">
                     <label> Model Name: {{trustcalc.modelname1}} </label>
@@ -566,7 +619,7 @@
               <div class=" col-md-6 pl-md-1">
                 <div class=" form-group">
                   <div class="mx-3 row">
-                    <h4>Model2 Information:</h4>
+                    <h4>General Information Model 2:</h4>
                   </div>
                   <div class="mx-3 row">
                     <label> Model Name: {{trustcalc.modelname2}} </label>
@@ -592,7 +645,7 @@
               <div class=" col-md-6 pl-md-1">
                 <div class=" form-group">
                   <div class="mx-3 row">
-                    <h4>Model1 Information:</h4>
+                    <h4>Performance Metrics Model 1:</h4>
                   </div>
                   <div class="mx-3 row">
                     <label> Accuracy: {{trustcalc.accuracy}} </label>
@@ -621,7 +674,7 @@
               <div class=" col-md-6 pl-md-1">
                 <div class=" form-group">
                   <div class="mx-3 row">
-                    <h4>Model2 Information:</h4>
+                    <h4>Performance Metrics Model 2</h4>
                   </div>
                   <div class="mx-3 row">
                     <label> Accuracy: {{trustcalc.accuracy2}} </label>
@@ -648,7 +701,7 @@
               </div>
             </div>
 
-            <h3 align="left" class="col-md-6">Section</h3>
+            <h3 align="left" class="col-md-6">Scores</h3>
             <div class="row">
               <div class="col-md-6">
                 <canvas id="canvas1">{{ trustChart1 }}</canvas>
@@ -685,10 +738,10 @@
             <hr style="background: #666;">
             <div style="margin-top: 10px;" class="row col-md-12">
 
-              <div class="card col-md-5 pl-md-1" style="background: #230B1F;">
+              <div class="card col-md-5 pl-md-1" style="background: palevioletred;">
                 <div class="col-md-12 form-group">
                   <div class="mx-3 row">
-                    <h4>For Solution1:</h4>
+                    <h4>Summary Model 1</h4>
                   </div>
                   <div class="mx-3 row">
                     <label class="col-md-12 row">
@@ -732,10 +785,10 @@
                 </div>
               </div>
               <div class="col-md-1"></div>
-              <div class="card col-md-5 pl-md-1" style="background: #230B1F;">
+              <div class="card col-md-5 pl-md-1" style="background: palevioletred;">
                 <div class="col-md-12 form-group">
                   <div class="mx-3 row">
-                    <h4>For Solution2:</h4>
+                    <h4>Summary Model 2</h4>
                   </div>
                   <div class="mx-3 row">
                     <label class="col-md-12 row">

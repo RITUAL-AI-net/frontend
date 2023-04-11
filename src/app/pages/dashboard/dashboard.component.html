@@ -1,15 +1,19 @@
 <div class=" content">
+  <div class="main-panel">
+
   <div class=" row">
     <div class=" col-12">
       <div class="card" style="background: #230b1f">
         <div class="row">
-          <h6 style="padding-left: 25px">Description</h6>
-          <a class="nav-link" routerLink="/comment">View About Scores</a>
-        </div>
+       </div>
       </div>
     </div>
   </div>
-
+  <title>RITUAL.AI</title>
+    <div class="container">
+      <h1 class="text-center my-5">RITUAL.AI</h1>
+      <p class="text-center"><a href="https://github.com/trustcalc/trustcalc" target="_blank">GitHub Repo</a></p>
+    </div>
   <div class=" row">
     <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
       <!-- Indicators -->
@@ -26,7 +30,6 @@
             <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
           </video>
           <div class="carousel-caption d-none d-md-block">
-            <h5>How to use the webapp</h5>
           </div>
         </div>
 
@@ -35,77 +38,109 @@
 
       <!-- Controls -->
 
+     <!-- How it works section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">How it Works</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0">
+          <div class="card-body text-center">
+            <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+            <h4 class="card-title mb-3">Upload Data</h4>
+            <p class="card-text">You are building machine learning models for your organisation and you are unsure how trustworthy they are? Use our platform to get answers to your questions. You upload your model, training data and factsheet to our platform.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0">
+          <div class="card-body text-center">
+            <i class="fas fa-chart-bar fa-3x mb-3"></i>
+            <h4 class="card-title mb-3">Analyze</h4>
+            <p class="card-text">We analyze your model regarding fairness, explainablity, robustness and accountability using industry standard metrics. This will tell you how well your model performs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0">
+          <div class="card-body text-center">
+            <i class="fas fa-wrench fa-3x mb-3"></i>
+            <h4 class="card-title mb-3">Improve</h4>
+            <p class="card-text">Your model will be checked in many different dimension. This gives you valuable performance insights. Use this assessment in order to further enhance your model.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div style="margin-top: 10px;" class="col-md-12">
-      <div class="card">
-        <section>
-          <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
-          <p class="text-center mb-5">
-            Find the answers for the most frequently asked questions below
-          </p>
-
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> A simple
-                question?</h6>
-              <p>
-                <strong><u>Absolutely!</u></strong> We work with top payment companies which guarantees
-                your
-                safety and
-                security. All billing information is stored on our payment processing partner.
-              </p>
+<!-- Metrics section -->
+<section class="py-5 bg">
+  <div class="container">
+    <h2 class="text-center mb-5">What Metrics Do We Apply?</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Fairness</h4>
+            <ul>
+              <li>Underfitting</li>
+              <li>Overfitting</li>
+              <li>Statistical Parity Difference</li>
+              <li>Equal Opportunity Difference</li>
+              <li>Average Odds Difference</li>
+              <li>Disparate Impact</li>
+              <li>Class Balance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Explainability</h4>
+            <ul>
+              <li>Algorithm Class</li>
+              <li>Correlated Features</li>
+              <li>Model Size</li>
+              <li>Feature Relevance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0">
+          <div class="card-body">
+                  <h4 class="card-title mb-3">Robustness</h4>
+                  <ul>
+                    <li>Confidence Score</li>
+                    <li>Clique Method</li>
+                    <li>Loss Sensitivity</li>
+                    <li>Clever Score</li>
+                    <li>Er Fast Gradient Attack</li>
+                    <li>Er Carlini Wagner Attack</li>
+                    <li>Er Deepfool Attack</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> A question
-                that
-                is longer then the previous one?</h6>
-              <p>
-                <strong><u>Yes, it is possible!</u></strong> You can cancel your subscription anytime in
-                your
-                account. Once the subscription is
-                cancelled, you will not be charged next month.
-              </p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i> A simple
-                question?
-              </h6>
-              <p>
-                Currently, we only offer monthly subscription. You can upgrade or cancel your monthly
-                account at any time with no further obligation.
-              </p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> A simple
-                question?
-              </h6>
-              <p>
-                Yes. Go to the billing section of your dashboard and update your payment information.
-              </p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> A simple
-                question?
-              </h6>
-              <p><strong><u>Unfortunately no</u>.</strong> We do not issue full or partial refunds for any
-                reason.</p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> Another
-                question that is longer than usual</h6>
-              <p>
-                Of course! We’re happy to offer a free plan to anyone who wants to try our service.
-              </p>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card border-0">
+                <div class="card-body">
+                  <h4 class="card-title mb-3">Accountability</h4>
+                  <ul>
+                    <li>Normalization</li>
+                    <li>Missing Data</li>
+                    <li>Regularization</li>
+                    <li>Train Test Split</li>
+                    <li>Factsheet Completeness</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

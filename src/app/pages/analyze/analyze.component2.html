@@ -509,22 +509,14 @@
                         <select class="dropdown" name="SolutionSelect" id="SolutionSelect"
                           [(ngModel)]="trustcalc.SelectSolution" required>
                           <option>Select Solution</option>
-                          <option *ngFor="let scname of SolutionName if ScenarioName is trustcalc.ScenarioName">
+                          <option *ngFor="let scname of SolutionName">
                             {{scname}}
                           </option>
                         </select>
                       </td>
-                      <td class="unwrap" style="background: none">
-                        <button (click)="analyze()" class="analyze" type="submit">Analyze
-                          Solution</button>
-                      </td>
                     </tr>
-                   
                   </div>
-                  
                 </div>
-                
-    
 
 
               </div>
@@ -1018,19 +1010,13 @@
                         <select class="dropdown" name="SolutionSelect" id="SolutionSelect"
                           [(ngModel)]="trustcalc.SelectSolution" required>
                           <option>Select Solution</option>
-                          <option *ngFor="let scname of SolutionName if ScenarioName is trustcalc.ScenarioName">
+                          <option *ngFor="let scname of SolutionName">
                             {{scname}}
                           </option>
                         </select>
                       </td>
-                      <td class="unwrap" style="background: none">
-                        <button (click)="analyze()" class="analyze" type="submit">Analyze
-                          Solution</button>
-                      </td>
                     </tr>
-                   
                   </div>
-                  
                 </div>
 
 
@@ -1291,6 +1277,8 @@
             </form>
           </div>
           <div class=" card-footer">
+            <button (click)="analyze()" class="analyze" type="submit">Analyze
+              Solution</button>
           </div>
         </div>
       </div>

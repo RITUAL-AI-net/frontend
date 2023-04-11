@@ -93,7 +93,7 @@ export class trustcalcService {
   }
 
   deleteSenario(scenarioId): Observable<any> {
-    return this.http.get(`${scenarioUrl}/${scenarioId}`);
+    return this.http.delete(`${scenarioUrl}/${scenarioId}`);
   }
 
   getSolution(id): Observable<any> {

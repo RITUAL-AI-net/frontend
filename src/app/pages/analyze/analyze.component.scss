@@ -3,3 +3,51 @@
   align-items: center;
   justify-content: space-between;
 }
+
+h5 {
+  margin-top: 0px;
+}
+
+button {
+  border-radius: 25px;
+  // border: 1px solid #DFCFBE;
+}
+
+button:focus-visible {
+  border: 1px solid #7FCDCD;
+  outline: none !important;
+}
+
+button:focus {
+  border: 1px solid #7FCDCD;
+  outline: none !important;
+}
+
+.btn-primary {
+  background-color: palevioletred !important;
+  background-image: none;
+}
+
+.btn-primary:hover {
+  background-color: #DFCFBE !important;
+  background-image: none !important;
+}
+
+.analyze {
+  padding: 3px 10px;
+  font-size: 13px;
+  color: white;
+  margin-left: 10px;
+  border-radius: 25px;
+  border: none;
+  background: palevioletred;
+}
+
+label {
+  font-size: 15px;
+}
+
+select {
+  border-radius: 25px !important;
+  text-align: center;
+}

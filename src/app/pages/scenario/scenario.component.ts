@@ -6,7 +6,8 @@ import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-scenario",
-  templateUrl: "scenario.component.html"
+  templateUrl: "scenario.component.html",
+  styleUrls: ['scenario.component.scss']
 })
 export class ScenarioComponent implements OnInit {
   trustcalc = {

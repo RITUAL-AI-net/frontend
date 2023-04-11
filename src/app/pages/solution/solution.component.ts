@@ -290,7 +290,7 @@ export class IconsComponent implements OnInit {
     this.trustcalcservice.uploadsolution(formData)
       .subscribe(
         response => {
-          // this.router.navigate(['/dashboard'])
+          this.router.navigate(['/dashboard'])
         },
         error => {
         }

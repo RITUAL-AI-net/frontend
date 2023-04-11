@@ -273,6 +273,8 @@ export class compareComponent implements OnInit {
     this.trustcalcservice.getsolution(localStorage.getItem('email')).subscribe((data: any) => {
       this.SolutionName = data.SolutionName;
     });
+
+    this.makeChart();
   }
 
   createChart(id: string, labelId: string, label: string, data): Chart {
@@ -528,42 +530,42 @@ export class compareComponent implements OnInit {
     ).toFixed(2);
 
     this.trustcalc.fairness_score2 = (
-      parseFloat(this.trustcalc.fair.underfitting2) * this.weights.fairness2.underfitting +
-      (isNaN(parseFloat(this.trustcalc.fair.overfitting2)) ? 0 : parseFloat(this.trustcalc.fair.overfitting2) * this.weights.fairness2.overfitting) +
-      (isNaN(parseFloat(this.trustcalc.fair.statistical_parity_difference2)) ? 0 : parseFloat(this.trustcalc.fair.statistical_parity_difference2) * this.weights.fairness2.statistical_parity_difference) +
-      (isNaN(parseFloat(this.trustcalc.fair.equal_opportunity_difference2)) ? 0 : parseFloat(this.trustcalc.fair.equal_opportunity_difference2) * this.weights.fairness2.equal_opportunity_difference) +
-      (isNaN(parseFloat(this.trustcalc.fair.average_odds_difference2)) ? 0 : parseFloat(this.trustcalc.fair.average_odds_difference2) * this.weights.fairness2.average_odds_difference) +
-      (isNaN(parseFloat(this.trustcalc.fair.disperate_impact2)) ? 0 : parseFloat(this.trustcalc.fair.disperate_impact2) * this.weights.fairness2.disparate_impact) +
-      (isNaN(parseFloat(this.trustcalc.fair.class_balance2)) ? 0 : parseFloat(this.trustcalc.fair.class_balance2) * this.weights.fairness2.class_balance)
+      parseFloat(this.trustcalc.fair.underfitting2) * this.weights.fairness1.underfitting +
+      (isNaN(parseFloat(this.trustcalc.fair.overfitting2)) ? 0 : parseFloat(this.trustcalc.fair.overfitting2) * this.weights.fairness1.overfitting) +
+      (isNaN(parseFloat(this.trustcalc.fair.statistical_parity_difference2)) ? 0 : parseFloat(this.trustcalc.fair.statistical_parity_difference2) * this.weights.fairness1.statistical_parity_difference) +
+      (isNaN(parseFloat(this.trustcalc.fair.equal_opportunity_difference2)) ? 0 : parseFloat(this.trustcalc.fair.equal_opportunity_difference2) * this.weights.fairness1.equal_opportunity_difference) +
+      (isNaN(parseFloat(this.trustcalc.fair.average_odds_difference2)) ? 0 : parseFloat(this.trustcalc.fair.average_odds_difference2) * this.weights.fairness1.average_odds_difference) +
+      (isNaN(parseFloat(this.trustcalc.fair.disperate_impact2)) ? 0 : parseFloat(this.trustcalc.fair.disperate_impact2) * this.weights.fairness1.disparate_impact) +
+      (isNaN(parseFloat(this.trustcalc.fair.class_balance2)) ? 0 : parseFloat(this.trustcalc.fair.class_balance2) * this.weights.fairness1.class_balance)
     ).toFixed(2);
     this.trustcalc.explainability_score2 = (
-      (isNaN(parseFloat(this.trustcalc.explain.algorithm2)) ? 0 : parseFloat(this.trustcalc.explain.algorithm2) * this.weights.explainability2.algorithm_class) +
-      (isNaN(parseFloat(this.trustcalc.explain.correlated2)) ? 0 : parseFloat(this.trustcalc.explain.correlated2) * this.weights.explainability2.correlated_features) +
-      (isNaN(parseFloat(this.trustcalc.explain.model_size2)) ? 0 : parseFloat(this.trustcalc.explain.model_size2) * this.weights.explainability2.model_size) +
-      (isNaN(parseFloat(this.trustcalc.explain.feature_relevance2)) ? 0 : parseFloat(this.trustcalc.explain.feature_relevance2) * this.weights.explainability2.feature_relevance) +
-      (isNaN(parseFloat(this.trustcalc.explain.permutation_feature_importance2)) ? 0 : parseFloat(this.trustcalc.explain.permutation_feature_importance2) * this.weights.explainability2.permutation_feature_importance)
+      (isNaN(parseFloat(this.trustcalc.explain.algorithm2)) ? 0 : parseFloat(this.trustcalc.explain.algorithm2) * this.weights.explainability1.algorithm_class) +
+      (isNaN(parseFloat(this.trustcalc.explain.correlated2)) ? 0 : parseFloat(this.trustcalc.explain.correlated2) * this.weights.explainability1.correlated_features) +
+      (isNaN(parseFloat(this.trustcalc.explain.model_size2)) ? 0 : parseFloat(this.trustcalc.explain.model_size2) * this.weights.explainability1.model_size) +
+      (isNaN(parseFloat(this.trustcalc.explain.feature_relevance2)) ? 0 : parseFloat(this.trustcalc.explain.feature_relevance2) * this.weights.explainability1.feature_relevance) +
+      (isNaN(parseFloat(this.trustcalc.explain.permutation_feature_importance2)) ? 0 : parseFloat(this.trustcalc.explain.permutation_feature_importance2) * this.weights.explainability1.permutation_feature_importance)
     ).toFixed(2);
     this.trustcalc.methodology_score2 = (
-      (isNaN(parseFloat(this.trustcalc.account.normalization2)) ? 0 : parseFloat(this.trustcalc.account.normalization2) * this.weights.methodology2.normalization) +
-      (isNaN(parseFloat(this.trustcalc.account.missing_data2)) ? 0 : parseFloat(this.trustcalc.account.missing_data2) * this.weights.methodology2.missing_data) +
-      (isNaN(parseFloat(this.trustcalc.account.regularization2)) ? 0 : parseFloat(this.trustcalc.account.regularization2) * this.weights.methodology2.regularization) +
-      (isNaN(parseFloat(this.trustcalc.account.train_test_split2)) ? 0 : parseFloat(this.trustcalc.account.train_test_split2) * this.weights.methodology2.train_test_split) +
-      (isNaN(parseFloat(this.trustcalc.account.factsheet_completeness2)) ? 0 : parseFloat(this.trustcalc.account.factsheet_completeness2) * this.weights.methodology2.factsheet_completeness)
+      (isNaN(parseFloat(this.trustcalc.account.normalization2)) ? 0 : parseFloat(this.trustcalc.account.normalization2) * this.weights.methodology1.normalization) +
+      (isNaN(parseFloat(this.trustcalc.account.missing_data2)) ? 0 : parseFloat(this.trustcalc.account.missing_data2) * this.weights.methodology1.missing_data) +
+      (isNaN(parseFloat(this.trustcalc.account.regularization2)) ? 0 : parseFloat(this.trustcalc.account.regularization2) * this.weights.methodology1.regularization) +
+      (isNaN(parseFloat(this.trustcalc.account.train_test_split2)) ? 0 : parseFloat(this.trustcalc.account.train_test_split2) * this.weights.methodology1.train_test_split) +
+      (isNaN(parseFloat(this.trustcalc.account.factsheet_completeness2)) ? 0 : parseFloat(this.trustcalc.account.factsheet_completeness2) * this.weights.methodology1.factsheet_completeness)
     ).toFixed(2);
     this.trustcalc.robustness_score2 = (
-      (isNaN(parseFloat(this.trustcalc.robust.confidence_score2)) ? 0 : parseFloat(this.trustcalc.robust.confidence_score2) * this.weights.robustness2.confidence_score) +
-      (isNaN(parseFloat(this.trustcalc.robust.clique_method2)) ? 0 : parseFloat(this.trustcalc.robust.clique_method2) * this.weights.robustness2.clique_method) +
-      (isNaN(parseFloat(this.trustcalc.robust.loss_sensitivity2)) ? 0 : parseFloat(this.trustcalc.robust.loss_sensitivity2) * this.weights.robustness2.loss_sensitivity) +
-      (isNaN(parseFloat(this.trustcalc.robust.clever_score2)) ? 0 : parseFloat(this.trustcalc.robust.clever_score2) * this.weights.robustness2.clever_score) +
-      (isNaN(parseFloat(this.trustcalc.robust.er_fast_gradient_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_fast_gradient_attack2) * this.weights.robustness2.er_fast_gradient_attack) +
-      (isNaN(parseFloat(this.trustcalc.robust.er_carlini_wagner_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_carlini_wagner_attack2) * this.weights.robustness2.er_carlini_wagner_attack) +
-      (isNaN(parseFloat(this.trustcalc.robust.er_deepfool_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_deepfool_attack2) * this.weights.robustness2.er_deepfool_attack)
+      (isNaN(parseFloat(this.trustcalc.robust.confidence_score2)) ? 0 : parseFloat(this.trustcalc.robust.confidence_score2) * this.weights.robustness1.confidence_score) +
+      (isNaN(parseFloat(this.trustcalc.robust.clique_method2)) ? 0 : parseFloat(this.trustcalc.robust.clique_method2) * this.weights.robustness1.clique_method) +
+      (isNaN(parseFloat(this.trustcalc.robust.loss_sensitivity2)) ? 0 : parseFloat(this.trustcalc.robust.loss_sensitivity2) * this.weights.robustness1.loss_sensitivity) +
+      (isNaN(parseFloat(this.trustcalc.robust.clever_score2)) ? 0 : parseFloat(this.trustcalc.robust.clever_score2) * this.weights.robustness1.clever_score) +
+      (isNaN(parseFloat(this.trustcalc.robust.er_fast_gradient_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_fast_gradient_attack2) * this.weights.robustness1.er_fast_gradient_attack) +
+      (isNaN(parseFloat(this.trustcalc.robust.er_carlini_wagner_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_carlini_wagner_attack2) * this.weights.robustness1.er_carlini_wagner_attack) +
+      (isNaN(parseFloat(this.trustcalc.robust.er_deepfool_attack2)) ? 0 : parseFloat(this.trustcalc.robust.er_deepfool_attack2) * this.weights.robustness1.er_deepfool_attack)
     ).toFixed(2);
     this.trustcalc.trust_score2 = (
-      parseFloat(this.trustcalc.fairness_score2) * this.weights.fairness2.main +
-      parseFloat(this.trustcalc.explainability_score2) * this.weights.explainability2.main +
-      parseFloat(this.trustcalc.methodology_score2) * this.weights.methodology2.main +
-      parseFloat(this.trustcalc.robustness_score2) * this.weights.robustness2.main
+      parseFloat(this.trustcalc.fairness_score2) * this.weights.fairness1.main +
+      parseFloat(this.trustcalc.explainability_score2) * this.weights.explainability1.main +
+      parseFloat(this.trustcalc.methodology_score2) * this.weights.methodology1.main +
+      parseFloat(this.trustcalc.robustness_score2) * this.weights.robustness1.main
     ).toFixed(2);
 
     // this.makeChart();
