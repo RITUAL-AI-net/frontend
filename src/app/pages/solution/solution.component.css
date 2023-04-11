@@ -1,0 +1,9 @@
+.tooltext {
+  margin-left: 15px;
+  font-size: 15px;
+  color: white;
+}
+
+form.drawer-div>p {
+  color: black !important;
+}

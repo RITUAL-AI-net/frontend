@@ -1,0 +1,115 @@
+<div class="p-5">
+  <button (click)="backClicked()"
+    style="font-size: 20px; background: transparent; border-radius: 36px; border: 1px solid rebeccapurple; color: white">Back</button>
+  <h2 style="color:cornflowerblue">Metrics for Supervised & Unsupervised, Supervised, Unsupervised Solutions</h2>
+  <h3 style="color:aqua">Fairness:</h3>
+  <div class="detail">
+    Underfitting,
+    Overfitting,
+    Statistical Parity Difference,
+    Disperate Impact,
+    Equal Opportunity Difference,
+    Average Odds Difference,
+    Class Balance
+  </div>
+
+  <h3 style="color:aqua">Explainability:</h3>
+  <div class="detail">
+    Correlated Features,
+    Overfitting,
+    Model Size,
+    Algorithm Class,
+    Model Size
+  </div>
+
+  <h3 style="color:aqua">Robustness:</h3>
+  <div class="detail">
+    CLEVER,
+    Confidence Score,
+    Clique Method,
+    Loss Sensitivity,
+    ER Carlini Wagner,
+    ER Fast Gradient,
+    ER Deep Fool
+  </div>
+
+  <h3 style="color:aqua">Accountability/Methodology:</h3>
+  <div class="detail">
+    Normalization,
+    Missing Data,
+    Regularization,
+    Train Test Split,
+    Factsheet Completeness
+  </div>
+
+  <h3 style="color:bisque">
+    Fairness : Ensuring impartial and just decisions without discrimination of protected groups.
+  </h3>
+  <p>
+    • For both Unsupervised and Supervised Solutions
+    • Underfitting: calculates the difference between train and baseline performance to evaluate model complexity.
+    • Overfitting: calculates the difference between train and test performance to evaluate the model's generalization
+    ability.
+    • Statistical Parity Difference: ensures that the proportion of positive (or negative) classifications for protected
+    groups is the same as for the population as a whole.
+    • Disparate Impact: measures the ratio of protected and unprotected groups receiving a favorable prediction.
+    • Only for Supervised Solutions
+    • Equal Opportunity Difference: measures the difference between true positive rate (TPR) and false positive rate
+    (FPR)
+    for different groups.
+    • Average Odds Difference: measures the average difference between false positive rates and true positive rates for
+    protected and unprotected groups.
+    • Class Balance: measures the proportion of different classes in the training dataset.
+  </p>
+  <h3 style="color:bisque">
+    Explainability : Providing clarification of the decision rationale
+  </h3>
+  <p>
+    • For both Unsupervised and Supervised Solutions
+    • Correlated Features: measures the percentage of highly correlated features.
+    • Model Size: calculates the number of parameters used by models.
+    • Only for Unsupervised Solutions
+    • Permutation Feature Importance: computes feature importance by iterating over each feature column, shuffling its
+    column vector, and comparing the error in the shuffled vs. non-shuffled prediction outcome. The metric also yields a
+    features list sorted by the importance of each feature in descending order.
+    • Only for Supervised Solutions
+    • Features Relevance: computes the percentage of irrelevant features for a set of predictions.
+    • Algorithm Class: evaluates the model's explainability degree based on algorithm type and complexity.
+  </p>
+  <h3 style="color:bisque">
+    Robustness : Checking the resilience against adversarial inputs
+  </h3>
+  <p>
+    • For both Unsupervised and Supervised Solutions
+    • CLEVER Score: estimates the minimal perturbation required to change the classification for a given input. The
+    algorithm uses an estimate based on extreme value theory.
+    • Only for Supervised Solutions
+    • Confidence Score: measures the probability of correctly predicting a given sample.
+    • Clique Method: finds the exact minimal perturbation required to change a classification outcome.
+    • ER Fast Gradient: a white-box attack that is effective on Logistic Regression models, Support Vector Classifiers,
+    and
+    Neural Networks.
+    • ER Carlini Wagner: a white-box targeted attack algorithm tailored to three distance metrics. It optimizes a
+    minimization problem using gradient descent.
+    • ER DeepFool: an efficient white-box and untargeted attack for deep neural networks. It finds the nearest decision
+    boundary in norm for a given input and can be modified to be effective on Logistic Regression models and Support
+    Vector
+    Classifiers.
+    • Loss Sensitivity: local loss sensitivity quantifies the smoothness of a model by estimating its Lipschitz
+    continuity
+    constant. The smaller the value, the smoother the function.
+  </p>
+  <h3 style="color:bisque">
+    Accountability : Analyzing the quality of the model lifecycle
+  </h3>
+  <p>
+    • For both Unsupervised and Supervised Solutions
+    • Train/Test Split: ratio between sample number in training and testing datasets
+    • Missing Data: evaluation of handling of missing values of features in training dataset
+    • Normalization: evaluation if model trained with normalized or non-normalized data
+    • Regularization: measures measurement if ML/DL model used generalization techniques in training
+    • FactSheet Completeness: measurement if Factsheet contains all necessary information, to ensure trust of
+    stakeholder in
+    model and predictions
+  </p>
+</div>
