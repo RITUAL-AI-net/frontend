@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const baseUrl = 'http://130.60.156.180:8000/api/user';
+
 const solutionUrl = 'http://130.60.156.180:8000/api/solution';
 const analyzeUrl = 'http://130.60.156.180:8000/api/analyze';
 const compareUrl = 'http://130.60.156.180:8000/api/compare';
