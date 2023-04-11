@@ -7,14 +7,14 @@
 ![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-angular/bd_angular.gif)
 
 
-Black Dashboard Angular is a beautiful [Bootstrap 4](http://getbootstrap.com/) and [Angular](https://angular.io/) Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
+Black Dashboard Angular is a beautiful [Bootstrap 4](https://getbootstrap.com/) and [Angular](https://angular.io/) Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
 Black Dashboard Angular comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
 
 Black Dashboard Angular features over 16 individual components, giving you the freedom of choosing and combining. This means that there are thousands of possible combinations. All components can take variations in color, that you can easily modify using SASS files. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
 We thought about everything, so this dashboard comes with 2 versions, Dark Mode and Light Mode.
 
 Special thanks go for the owners of these plugins:
-- [Perfect Scrollbar](http://utatti.github.io/perfect-scrollbar/) for the nice scrollbars for windows.
+- [Perfect Scrollbar](https://utatti.github.io/perfect-scrollbar/) for the nice scrollbars for windows.
 - [Ng Bootstrap](https://ng-bootstrap.github.io/#/home) for the wonderful components.
 - [Chartjs](https://www.chartjs.org/) for the wonderful charts.
 
@@ -72,7 +72,7 @@ Quick start options:
 4. Run in terminal: ```npm install -g @angular/cli```
 5. Then: ```npm install```
 6. And: ```ng serve```
-7. Navigate to: [http://130.60.156.180:4200/](http://130.60.156.180:4200/)
+7. Navigate to: [https://130.60.156.180:4200/](https://130.60.156.180:4200/)
 
 ## File Structure
 
