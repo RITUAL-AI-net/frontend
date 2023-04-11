@@ -72,7 +72,7 @@ Quick start options:
 4. Run in terminal: ```npm install -g @angular/cli```
 5. Then: ```npm install```
 6. And: ```ng serve```
-7. Navigate to: [http://localhost:4200/](http://localhost:4200/)
+7. Navigate to: [http://130.60.156.180:4200/](http://130.60.156.180:4200/)
 
 ## File Structure
 

@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://127.0.0.1:8000/api/user';
-const solutionUrl = 'http://127.0.0.1:8000/api/solution';
-const analyzeUrl = 'http://127.0.0.1:8000/api/analyze';
-const compareUrl = 'http://127.0.0.1:8000/api/compare';
-const dashboardUrl = 'http://127.0.0.1:8000/api/dashboard';
-const authUrl = 'http://127.0.0.1:8000/api/auth';
-const userpageUrl = 'http://127.0.0.1:8000/api/userpage';
-const setuserUrl = 'http://127.0.0.1:8000/api/setuser';
-const scenarioUrl = 'http://127.0.0.1:8000/api/scenario';
-const solutionDetailUrl = 'http://127.0.0.1:8000/api/solution_detail';
+const baseUrl = 'http://130.60.156.180:8000/api/user';
+const solutionUrl = 'http://130.60.156.180:8000/api/solution';
+const analyzeUrl = 'http://130.60.156.180:8000/api/analyze';
+const compareUrl = 'http://130.60.156.180:8000/api/compare';
+const dashboardUrl = 'http://130.60.156.180:8000/api/dashboard';
+const authUrl = 'http://130.60.156.180:8000/api/auth';
+const userpageUrl = 'http://130.60.156.180:8000/api/userpage';
+const setuserUrl = 'http://130.60.156.180:8000/api/setuser';
+const scenarioUrl = 'http://130.60.156.180:8000/api/scenario';
+const solutionDetailUrl = 'http://130.60.156.180:8000/api/solution_detail';
 
 @Injectable({
   providedIn: 'root'
@@ -101,7 +101,7 @@ export class trustcalcService {
   }
 
   getSolutionList(email): Observable<any> {
-    return this.http.get(`http://127.0.0.1:8000/api/solution_list/${email}`);
+    return this.http.get(`http://130.60.156.180:8000/api/solution_list/${email}`);
   }
 
   updateSolution(data): Observable<any> {

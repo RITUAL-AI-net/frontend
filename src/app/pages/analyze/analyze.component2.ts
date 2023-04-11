@@ -306,7 +306,7 @@ export class analyzeComponent implements OnInit {
   downloadFile() {
     const link = document.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'http://127.0.0.1:8000/api/factsheet_download');
+    link.setAttribute('href', 'http://130.60.156.180:8000/api/factsheet_download');
     document.body.appendChild(link);
     link.click();
     link.remove();
