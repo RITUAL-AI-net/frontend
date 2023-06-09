@@ -308,42 +308,44 @@
                     <p class="fairness">Fairness</p>
                     <div class="adjust"><span>underfitting value: {{weights.fairness.underfitting.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="weights.fairness.underfitting">
+                        [(ngModel)]="weights.fairness.underfitting">
                       </mat-slider>
                     </div>
-                    <div class="adjust"><span>overfitting value: {{this.weights.fairness.overfitting.toFixed(2)}}</span>
+                    <div class="adjust">
+                      <span>overfitting value: {{ weights.fairness.overfitting.toFixed(2) }}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.overfitting">
+                        (input)="updateOverfittingSlider()" [(ngModel)]="weights.fairness.overfitting">
                       </mat-slider>
                     </div>
+                    
                     <div class="adjust"><span>statistical_parity_difference value:
                         {{this.weights.fairness.statistical_parity_difference.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.statistical_parity_difference">
+                        [(ngModel)]="this.weights.fairness.statistical_parity_difference">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>equal_opportunity_difference value:
                         {{this.weights.fairness.equal_opportunity_difference.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.equal_opportunity_difference">
+                        [(ngModel)]="this.weights.fairness.equal_opportunity_difference">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>average_odds_difference value:
                         {{this.weights.fairness.average_odds_difference.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.fairness.average_odds_difference"></mat-slider>
                     </div>
                     <div class="adjust"><span>disparate_impact value:
                         {{this.weights.fairness.disparate_impact.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.disparate_impact">
+                        [(ngModel)]="this.weights.fairness.disparate_impact">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>class_balance value:
                         {{this.weights.fairness.class_balance.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.class_balance"></mat-slider>
+                        [(ngModel)]="this.weights.fairness.class_balance"></mat-slider>
                     </div>
                   </div>
                   <div class="explainability col-md-6 p-2">
@@ -351,25 +353,25 @@
                     <div class="adjust"><span>algorithm_class value:
                         {{this.weights.explainability.algorithm_class.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.explainability.algorithm_class"></mat-slider>
                     </div>
                     <div class="adjust"><span>correlated_features value:
                         {{this.weights.explainability.correlated_features.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.explainability.correlated_features"></mat-slider>
                     </div>
                     <div class="adjust"><span>model_size value:
                         {{this.weights.explainability.model_size.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.model_size">
+                        [(ngModel)]="this.weights.explainability.model_size">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>feature_relevance value:
                         {{this.weights.explainability.feature_relevance.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.feature_relevance">
+                        [(ngModel)]="this.weights.explainability.feature_relevance">
                       </mat-slider>
                     </div>
                   </div>
@@ -378,41 +380,41 @@
                     <div class="adjust"><span>confidence_score value:
                         {{this.weights.robustness.confidence_score.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.robustness.confidence_score"></mat-slider>
                     </div>
                     <div class="adjust"><span>clique_method value:
                         {{this.weights.robustness.clique_method.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.robustness.clique_method"></mat-slider>
+                        [(ngModel)]="this.weights.robustness.clique_method"></mat-slider>
                     </div>
                     <div class="adjust"><span>loss_sensitivity value:
                         {{this.weights.robustness.loss_sensitivity.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.robustness.loss_sensitivity"></mat-slider>
                     </div>
                     <div class="adjust"><span>clever_score value:
                         {{this.weights.robustness.clever_score.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.robustness.clever_score"></mat-slider>
+                        [(ngModel)]="this.weights.robustness.clever_score"></mat-slider>
                     </div>
                     <div class="adjust"><span>er_fast_gradient_attack value:
                         {{this.weights.robustness.er_fast_gradient_attack.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.robustness.er_fast_gradient_attack"></mat-slider>
                     </div>
                     <div class="adjust"><span>er_carlini_wagner_attack value:
                         {{this.weights.robustness.er_carlini_wagner_attack.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.robustness.er_carlini_wagner_attack"></mat-slider>
                     </div>
                     <div class="adjust"><span>er_deepfool_attack value:
                         {{this.weights.robustness.er_deepfool_attack.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.robustness.er_deepfool_attack"></mat-slider>
                     </div>
                   </div>
@@ -421,28 +423,28 @@
                     <div class="adjust"><span>normalization value:
                         {{this.weights.methodology.normalization.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.normalization"></mat-slider>
+                        [(ngModel)]="this.weights.methodology.normalization"></mat-slider>
                     </div>
                     <div class="adjust"><span>missing_data value:
                         {{this.weights.methodology.missing_data.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.missing_data"></mat-slider>
+                        [(ngModel)]="this.weights.methodology.missing_data"></mat-slider>
                     </div>
                     <div class="adjust"><span>regularization value:
                         {{this.weights.methodology.regularization.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.regularization"></mat-slider>
+                        [(ngModel)]="this.weights.methodology.regularization"></mat-slider>
                     </div>
                     <div class="adjust"><span>train_test_split value:
                         {{this.weights.methodology.train_test_split.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.train_test_split">
+                        [(ngModel)]="this.weights.methodology.train_test_split">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>factsheet_completeness value:
                         {{this.weights.methodology.factsheet_completeness.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.methodology.factsheet_completeness"></mat-slider>
                     </div>
                   </div>
@@ -453,19 +455,19 @@
                 <div class="pillars p-2">
                   <div class="adjust"><span>fairness value: {{this.weights.fairness.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.main"></mat-slider>
+                      [(ngModel)]="this.weights.fairness.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>explainability value: {{this.weights.explainability.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.main"></mat-slider>
+                      [(ngModel)]="this.weights.explainability.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>robustness value: {{this.weights.robustness.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.robustness.main"></mat-slider>
+                      [(ngModel)]="this.weights.robustness.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>methodology value: {{this.weights.methodology.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.main"></mat-slider>
+                      [(ngModel)]="this.weights.methodology.main"></mat-slider>
                   </div>
                 </div>
               </div>
@@ -884,22 +886,22 @@
                     <div class="adjust"><span>underfitting value:
                         {{this.weights.fairness.underfitting.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.underfitting"></mat-slider>
+                        [(ngModel)]="this.weights.fairness.underfitting"></mat-slider>
                     </div>
                     <div class="adjust"><span>overfitting value: {{this.weights.fairness.overfitting.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.overfitting"></mat-slider>
+                        [(ngModel)]="this.weights.fairness.overfitting"></mat-slider>
                     </div>
                     <div class="adjust"><span>statistical_parity_difference value:
                         {{this.weights.fairness.statistical_parity_difference.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.fairness.statistical_parity_difference"></mat-slider>
                     </div>
                     <div class="adjust"><span>disparate_impact value:
                         {{this.weights.fairness.disparate_impact.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="fairnessMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.disparate_impact"></mat-slider>
+                        [(ngModel)]="this.weights.fairness.disparate_impact"></mat-slider>
                     </div>
                   </div>
                   <div class="explainability col-md-6 p-2">
@@ -907,18 +909,18 @@
                     <div class="adjust"><span>correlated_features value:
                         {{this.weights.explainability.correlated_features.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.correlated_features">
+                        [(ngModel)]="this.weights.explainability.correlated_features">
                       </mat-slider>
                     </div>
                     <div class="adjust"><span>model_size value:
                         {{this.weights.explainability.model_size.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.model_size"></mat-slider>
+                        [(ngModel)]="this.weights.explainability.model_size"></mat-slider>
                     </div>
                     <div class="adjust"><span>permutation_feature_importance value:
                         {{this.weights.explainability.permutation_feature_importance.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="explainMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.explainability.permutation_feature_importance"></mat-slider>
                     </div>
                   </div>
@@ -927,7 +929,7 @@
                     <div class="adjust"><span>clever_score value:
                         {{this.weights.robustness.clever_score.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="robustMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.robustness.clever_score"></mat-slider>
+                        [(ngModel)]="this.weights.robustness.clever_score"></mat-slider>
                     </div>
                   </div>
                   <div class="methodology p-2 col-md-6">
@@ -935,23 +937,23 @@
                     <div class="adjust"><span>normalization value:
                         {{this.weights.methodology.normalization.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.normalization"></mat-slider>
+                        [(ngModel)]="this.weights.methodology.normalization"></mat-slider>
                     </div>
                     <div class="adjust"><span>missing_data value:
                         {{this.weights.methodology.missing_data.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.missing_data"></mat-slider>
+                        [(ngModel)]="this.weights.methodology.missing_data"></mat-slider>
                     </div>
                     <div class="adjust"><span>train_test_split value:
                         {{this.weights.methodology.train_test_split.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.methodology.train_test_split"></mat-slider>
                     </div>
                     <div class="adjust"><span>factsheet_completeness value:
                         {{this.weights.methodology.factsheet_completeness.toFixed(2)}}</span>
                       <mat-slider class="example-margin" [max]="methodMax" min="0" step="0.01" discrete thumbLabel
-                        (change)="updateSliderMax()"
+                       
                         [(ngModel)]="this.weights.methodology.factsheet_completeness"></mat-slider>
                     </div>
                   </div>
@@ -962,19 +964,19 @@
                 <div class="pillars p-2">
                   <div class="adjust"><span>fairness value: {{this.weights.fairness.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.fairness.main"></mat-slider>
+                      [(ngModel)]="this.weights.fairness.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>explainability value: {{this.weights.explainability.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.explainability.main"></mat-slider>
+                      [(ngModel)]="this.weights.explainability.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>robustness value: {{this.weights.robustness.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.robustness.main"></mat-slider>
+                      [(ngModel)]="this.weights.robustness.main"></mat-slider>
                   </div>
                   <div class="adjust"><span>methodology value: {{this.weights.methodology.main.toFixed(2)}}</span>
                     <mat-slider class="example-margin" [max]="pillarMax" min="0" step="0.01" discrete thumbLabel
-                      (change)="updateSliderMax()" [(ngModel)]="this.weights.methodology.main"></mat-slider>
+                      [(ngModel)]="this.weights.methodology.main"></mat-slider>
                   </div>
                 </div>
               </div>
