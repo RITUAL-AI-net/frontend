@@ -307,108 +307,108 @@
                   <div class="row">
                     <div class="fairness col-md-6 p-2">
                       <p class="fairness">Fairness</p>
-                      <div class="adjust"><span>underfitting</span>
+                      <div class="adjust"><span>underfitting value: {{this.weights.fairness1.underfitting}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.underfitting"></mat-slider>
                       </div>
-                      <div class="adjust"><span>overfitting</span>
+                      <div class="adjust"><span>overfitting value: {{this.weights.fairness1.overfitting}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.overfitting"></mat-slider>
                       </div>
-                      <div class="adjust"><span>statistical_parity_difference</span>
+                      <div class="adjust"><span>statistical_parity_difference value: {{this.weights.fairness1.statistical_parity_difference}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.statistical_parity_difference"></mat-slider>
                       </div>
-                      <div class="adjust"><span>equal_opportunity_difference</span>
+                      <div class="adjust"><span>equal_opportunity_difference value: {{this.weights.fairness1.equal_opportunity_difference}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.equal_opportunity_difference"></mat-slider>
                       </div>
-                      <div class="adjust"><span>average_odds_difference</span>
+                      <div class="adjust"><span>average_odds_difference value: {{this.weights.fairness1.average_odds_difference}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.average_odds_difference"></mat-slider>
                       </div>
-                      <div class="adjust"><span>disparate_impact</span>
+                      <div class="adjust"><span>disparate_impact value: {{this.weights.fairness1.disparate_impact}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.disparate_impact"></mat-slider>
                       </div>
-                      <div class="adjust"><span>class_balance</span>
+                      <div class="adjust"><span>class_balance value: {{this.weights.fairness1.class_balance}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.fairness1.class_balance"></mat-slider>
                       </div>
                     </div>
                     <div class="explainability col-md-6 p-2">
                       <p class="explainability">explainability</p>
-                      <div class="adjust"><span>algorithm_class</span>
+                      <div class="adjust"><span>algorithm_class value: {{this.weights.explainability1.algorithm_class}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.explainability1.algorithm_class"></mat-slider>
                       </div>
-                      <div class="adjust"><span>correlated_features</span>
+                      <div class="adjust"><span>correlated_features value: {{this.weights.explainability1.correlated_features}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.explainability1.correlated_features"></mat-slider>
                       </div>
-                      <div class="adjust"><span>model_size</span>
+                      <div class="adjust"><span>model_size value: {{this.weights.explainability1.model_size}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.explainability1.model_size"></mat-slider>
                       </div>
-                      <div class="adjust"><span>feature_relevance</span>
+                      <div class="adjust"><span>feature_relevance value: {{this.weights.explainability1.feature_relevance}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.explainability1.feature_relevance"></mat-slider>
                       </div>
-                      <div class="adjust"><span>permutation_feature_importance</span>
+                      <div class="adjust"><span>permutation_feature_importance value: {{this.weights.explainability1.permutation_feature_importance}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.explainability1.permutation_feature_importance"></mat-slider>
                       </div>
                     </div>
                     <div class="robustness p-2 col-md-6">
                       <p class="robustness">robustness</p>
-                      <div class="adjust"><span>confidence_score</span>
+                      <div class="adjust"><span>confidence_score value: {{this.weights.robustness1.confidence_score}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.confidence_score"></mat-slider>
                       </div>
-                      <div class="adjust"><span>clique_method</span>
+                      <div class="adjust"><span>clique_method value: {{this.weights.robustness1.clique_method}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.clique_method"></mat-slider>
                       </div>
-                      <div class="adjust"><span>loss_sensitivity</span>
+                      <div class="adjust"><span>loss_sensitivity value: {{this.weights.robustness1.loss_sensitivity}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.loss_sensitivity"></mat-slider>
                       </div>
-                      <div class="adjust"><span>clever_score</span>
+                      <div class="adjust"><span>clever_score value: {{this.weights.robustness1.clever_score}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.clever_score"></mat-slider>
                       </div>
-                      <div class="adjust"><span>er_fast_gradient_attack</span>
+                      <div class="adjust"><span>er_fast_gradient_attack  value: {{this.weights.robustness1.er_fast_gradient_attack}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.er_fast_gradient_attack"></mat-slider>
                       </div>
-                      <div class="adjust"><span>er_carlini_wagner_attack</span>
+                      <div class="adjust"><span>er_carlini_wagner_attack  value: {{this.weights.robustness1.er_carlini_wagner_attack}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.er_carlini_wagner_attack"></mat-slider>
                       </div>
-                      <div class="adjust"><span>er_deepfool_attack</span>
+                      <div class="adjust"><span>er_deepfool_attack  value: {{this.weights.robustness1.er_deepfool_attack}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.robustness1.er_deepfool_attack"></mat-slider>
                       </div>
                     </div>
                     <div class="methodology p-2 col-md-6">
-                      <p class="methodology">methodology</p>
+                      <p class="methodology">methodology  value: {{this.weights.methodology1.normalization}}</p>
                       <div class="adjust"><span>normalization</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.methodology1.normalization"></mat-slider>
                       </div>
-                      <div class="adjust"><span>missing_data</span>
+                      <div class="adjust"><span>missing_data value: {{this.weights.methodology1.missing_data}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.methodology1.missing_data"></mat-slider>
                       </div>
-                      <div class="adjust"><span>regularization</span>
+                      <div class="adjust"><span>regularization value: {{this.weights.methodology1.regularization}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.methodology1.regularization"></mat-slider>
                       </div>
-                      <div class="adjust"><span>train_test_split</span>
+                      <div class="adjust"><span>train_test_split value: {{this.weights.methodology1.train_test_split}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.methodology1.train_test_split"></mat-slider>
                       </div>
-                      <div class="adjust"><span>factsheet_completeness</span>
+                      <div class="adjust"><span>factsheet_completeness value: {{this.weights.methodology1.factsheet_completeness}}</span>
                         <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                           [(ngModel)]="this.weights.methodology1.factsheet_completeness"></mat-slider>
                       </div>
@@ -418,19 +418,19 @@
                 <div class="pillars">
                   <h6>Weight Pillars</h6>
                   <div class="pillars p-2">
-                    <div class="adjust"><span>fairness</span>
+                    <div class="adjust"><span>fairness value: {{this.weights.fairness1.main}}</span>
                       <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                         [(ngModel)]="this.weights.fairness1.main"></mat-slider>
                     </div>
-                    <div class="adjust"><span>explainability</span>
+                    <div class="adjust"><span>explainability value: {{this.weights.explainability1.main}}</span>
                       <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                         [(ngModel)]="this.weights.explainability1.main"></mat-slider>
                     </div>
-                    <div class="adjust"><span>robustness</span>
+                    <div class="adjust"><span>robustness value: {{this.weights.robustness1.main}}</span>
                       <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                         [(ngModel)]="this.weights.robustness1.main"></mat-slider>
                     </div>
-                    <div class="adjust"><span>methodology</span>
+                    <div class="adjust"><span>methodology value: {{this.weights.methodology1.main}}</span>
                       <mat-slider class="example-margin" max="1" min="0" step="0.1" discrete
                         [(ngModel)]="this.weights.methodology1.main"></mat-slider>
                     </div>
